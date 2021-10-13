@@ -25,7 +25,11 @@ const Data = [
         q14:'Q14.Why am I failed to play the next video continuously?',
         q15:'Q15. can I change the colour of the subtitle in the video?',
         q16:'Q16.How can I switch from S/W to H/W   decoder while the video is running on screen?',
-        q17:'Q17.Why am I not able to manage the playback speed of the video?'
+        q17:'Q17.Why am I not able to manage the playback speed of the video?',
+        questionAnswer1:{
+            question:'What is to devlop',
+            answer:'React Framework'
+        }
     },
     {
         name: 'Audio',
