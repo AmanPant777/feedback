@@ -114,7 +114,7 @@ export default Fedback
 
 const Container = styled.div`
 color: white;
-height: 100%;
+height: 80%;
 `
 
 const HeaderFeedBack = styled.div`
