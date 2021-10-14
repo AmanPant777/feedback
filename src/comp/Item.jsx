@@ -68,7 +68,7 @@ export default Item
 
 const Container=styled.div`
 height: 100%;
-width: 80%;
+width: 100%;
 margin: auto;
 `
 const ItemContainer=styled.div`
@@ -86,6 +86,6 @@ font-size: 30px;
 margin-left: 40px;
 `
 const Question=styled.div`
-width: 70%;
+width: 90%;
 margin:auto
 `

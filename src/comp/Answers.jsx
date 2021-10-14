@@ -11,7 +11,7 @@ const Answers = ({location}) => {
             <Header onClick={()=>history.push('/')}>
             <FontAwesomeIcon icon={faArrowLeft} size={60} />
             <HeaderTitle>
-     { question}
+                   { question}
             </HeaderTitle>
             </Header>
             <Answer>
@@ -39,21 +39,31 @@ const Answers = ({location}) => {
 export default Answers
 
 const Container=styled.div`
-min-height: 100vh;
 width: 100%;
+height: 100vh;
 `
 const Header=styled.div`
 display: flex;
 align-items: center;
 justify-content: space-between;
-width: 90%;
+width: 95%;
 margin: auto;
 cursor: pointer;
+@media (max-width:768px){
+justify-content: space-around;
+margin-left: 20px;
+position: relative;
+top: 40px;
+}
 `
 const HeaderTitle=styled.h2`
 flex: 1;
 margin-left: 50px;
 font-size: 30px;
+@media (max-width:768px){
+    font-size: 20px;
+    margin-left: 10px;
+}
 `
 const Answer=styled.h3`
 width: 70%;
@@ -61,34 +71,51 @@ margin-left: 200px;
 margin-right: auto;
 margin-top:100px;
 font-size: 20px;
+@media (max-width:768px){
+    width: 80%;
+    margin-left: 20%;
+    margin-top: 80px;
+    font-size: 15px;
+    overflow-x: hidden;
+}
 `
 
 const Border=styled.div`
 background-color: red;
 height: 2px;
 margin-top: 100px;
+@media (max-width:768px){
+    margin-top: 50px;
+}
 `
 const IconContainer=styled.div`
 margin: auto;
 width: 30%;
 padding: 20px;
-
+@media (max-width:768px){
+    margin-top: 50px;
+    width: 100%;
+    text-align: center;
+}
 `
     
 const IconTitle=styled.h4`
 font-family: sans-serif;
 font-size: 20px;
+align-items: center;
+text-align: center;
 `
     
 const Icons=styled.div`
 display: flex;
 justify-content: space-around;
-width: 50%;
-padding: 10px;
+width: 90%;
+padding: 20px;
 align-items: center;
 `
     
 const IconFooter=styled.div`
-padding: 20px;
+padding: 40px;
 margin: auto;
+text-align: center;
 `
