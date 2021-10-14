@@ -4,20 +4,19 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min'
 const Answers = ({location}) => {
-    // const answer=location.state
+     const {question,answer}=location.state
     const history=useHistory()
     return (
         <Container>
             <Header onClick={()=>history.push('/')}>
             <FontAwesomeIcon icon={faArrowLeft} size={60} />
             <HeaderTitle>
-            How can i Save Videos in my Gallery from the local storage of rocks player?
+     { question}
             </HeaderTitle>
             </Header>
             <Answer>
-                Whatever the videos yu have downlaoded from Rocks Video Player will be save automatically on yur phone gallery.
+               {answer.line1}
             </Answer>
-
             <Border>
             </Border>
             <IconContainer>
