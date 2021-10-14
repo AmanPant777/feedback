@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import FeedBackItem from './FeedBackItem'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
+import Item from './Item'
 
 
 const Data = [
@@ -26,10 +27,10 @@ const Data = [
         q15:'Q15. can I change the colour of the subtitle in the video?',
         q16:'Q16.How can I switch from S/W to H/W   decoder while the video is running on screen?',
         q17:'Q17.Why am I not able to manage the playback speed of the video?',
-        questionAnswer1:{
-            question:'What is to devlop',
-            answer:'React Framework'
-        }
+        question:[
+            'What is the purpose of this?',
+            'Q17.Why am I not able to manage the playback speed of the video? '
+        ]
     },
     {
         name: 'Audio',
@@ -38,7 +39,8 @@ const Data = [
         q2:'Q2.Is it possible to stop the playlist automatically after some time?',
         q3:'Q3.How can I change the sequence of songs in the playlist?',
         q4:'Q4.Why am I not able to get different themes on the player screen?',
-        q5:'Q5.Is it possible to share a song directly from the Player\'s screen?'
+        q5:'Q5.Is it possible to share a song directly from the Player\'s screen?',
+        question:[]
     },
     {
         name: 'Download Issues',
@@ -47,12 +49,14 @@ const Data = [
         q2:'Q2.Why downloading speed is low sometimes?',
         q3:'Q3.How can I change the storage site of my downloaded videos/photos?',
         q4:'Q4.How can I pause or cancel the downloading?',
-        q5:'Q5.Sometimes, why is it asking for a login for downloading any videos/photos?'
+        q5:'Q5.Sometimes, why is it asking for a login for downloading any videos/photos?',
+        question:[]
     },
     {
         name: 'Browser Issues',
         image: '/images/browser.png',
-        q1:'What is the trusted browser'
+        q1:'What is the trusted browser',
+        question:[]
     },
     {
         name: 'Premium',
@@ -60,12 +64,14 @@ const Data = [
         q1:'Q1.How can I get premium offers for the VIP stage?',
         q2:'Q2.What are the premium offers on rocks video player?',
         q3:'Q3.Do you have any lifetime membership plans?',
-        q4:'Q4.Will my VIP subscription will disappear automatically once i uninstall this app?'
+        q4:'Q4.Will my VIP subscription will disappear automatically once i uninstall this app?',
+        question:[]
     },
     {
         name: 'Others',
         image: '/images/others.png',
-         q1:'Help ?'
+         q1:'Help ?',
+         question:[]
     }
 ]
 
@@ -85,7 +91,7 @@ const Fedback = () => {
                     <h2>FeedBack</h2>
                 </FeedBackTitle>
                 <FeedBackValue>
-                    {Data.map(item => <FeedBackItem item={item} />)}
+                   <Item/>
                 </FeedBackValue>
             </FeedBack>
         </Container>

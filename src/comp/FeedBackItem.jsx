@@ -16,8 +16,23 @@ const FeedBackItem = ({ item }) => {
                 <FontAwesomeIcon icon={faArrowCircleDown} />
             </DownLink>
         </Container>
-        {question&&    <Questions >     
-          <Quiz onClick={()=>history.push({pathname:'/answer',state:{answer:'Display page'}})}>
+        {question&&    <Questions > 
+            <a >
+            {item.question[0]===null?
+            <FontAwesomeIcon icon={faArrowRight}/> :''}
+            </a>
+           <a >
+           <h4>{item.question[1]}</h4>
+           </a>
+           <a>
+           <h4>{item.question[2]}</h4>
+           </a>
+          
+          
+
+
+
+          {/* <Quiz onClick={()=>history.push({pathname:'/answer',state:{answer:'Display page'}})}>
               <h4>{item.q1}</h4>
               <FontAwesomeIcon icon={faArrowRight}/>
           </Quiz>
@@ -74,16 +89,17 @@ const FeedBackItem = ({ item }) => {
           <h4>{item.q14}</h4>
               <FontAwesomeIcon icon={faArrowRight}/>
          </Quiz>
-         <Quiz>
+         { item.q15&& <Quiz>
           <h4>{item.q15}</h4>
               <FontAwesomeIcon icon={faArrowRight}/>
-         </Quiz>
-         <Quiz onClick={()=>history.push({
+         </Quiz>} */}
+         {/* {item.questionAnswer1.question&& <Quiz onClick={()=>history.push({
              pathname:'/answer',
-             state:item.questionAnswer.answer
+             state:item.questionAnswer1.answer
          })}>
-             <h1>{item.questionAnswer.question}</h1>
-         </Quiz>
+             <h1>{item.questionAnswer1.question?item.questionAnswer1.question:''}</h1>
+         </Quiz> } */}
+         
        </Questions>
             }
         </>

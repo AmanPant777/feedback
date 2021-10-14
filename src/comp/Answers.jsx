@@ -29,8 +29,8 @@ const Answers = ({location}) => {
                 <img src="https://cdn-icons-png.flaticon.com/512/742/742774.png" alt="" width={40} height={40}/>
                 </Icons>
                 <IconFooter>
-                    <h5>The Problem isn't solved </h5>
-                    <h6>Send us feedback</h6>
+                    <h4>The Problem isn't solved </h4>
+                    <h5 style={{color:'red',marginTop:20,}}>Send us feedback</h5>
                 </IconFooter>
             </IconContainer>
         </Container>
@@ -54,14 +54,14 @@ cursor: pointer;
 const HeaderTitle=styled.h2`
 flex: 1;
 margin-left: 50px;
-font-size: 40px;
+font-size: 30px;
 `
 const Answer=styled.h3`
 width: 70%;
 margin-left: 200px;
 margin-right: auto;
 margin-top:100px;
-font-size: 30px;
+font-size: 20px;
 `
 
 const Border=styled.div`
