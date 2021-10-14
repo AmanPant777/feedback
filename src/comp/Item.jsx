@@ -17,7 +17,7 @@ const Item = () => {
             <ItemContainer onClick={()=>setVideos(!videos)}>
                <Image src='/images/video.png'></Image>
                <ItemTitle>Video</ItemTitle>
-               <FontAwesomeIcon icon={faArrowDown}/>
+               <FontAwesomeIcon icon={faArrowDown} size={'2x'}/>
            </ItemContainer>
            {videos&& <Question>
                <Video/>
@@ -27,7 +27,7 @@ const Item = () => {
             <ItemContainer onClick={()=>setAudio(!audio)}>
                <Image src='/images/music.png'></Image>
                <ItemTitle>Audio</ItemTitle>
-               <FontAwesomeIcon icon={faArrowDown}/>
+               <FontAwesomeIcon icon={faArrowDown} size={'2x'}/>
            </ItemContainer>
            {audio&& <Question>
                <Audio/>
@@ -37,7 +37,7 @@ const Item = () => {
             <ItemContainer onClick={()=>setDownload(!download)}>
                <Image src='/images/download.png'></Image>
                <ItemTitle>Download Issues</ItemTitle>
-               <FontAwesomeIcon icon={faArrowDown}/>
+               <FontAwesomeIcon icon={faArrowDown} size={'2x'}/>
            </ItemContainer>
            {download&& <Question><Download/></Question> }
             </div>
@@ -45,20 +45,20 @@ const Item = () => {
            <ItemContainer>
                <Image src='/images/browser.png'></Image>
                <ItemTitle>Browser Issue</ItemTitle>
-               <FontAwesomeIcon icon={faArrowDown}/>
+               <FontAwesomeIcon icon={faArrowDown} size={'2x'}/>
            </ItemContainer>
            <div>
            <ItemContainer onClick={()=>setPremium(!premium)}>
                <Image src='/images/vip.png'></Image>
                <ItemTitle>Premium</ItemTitle>
-               <FontAwesomeIcon icon={faArrowDown}/>
+               <FontAwesomeIcon icon={faArrowDown} size={'2x'}/>
            </ItemContainer>
            {premium&&<Question><Premium/></Question>}
            </div>
            <ItemContainer>
                <Image src='/images/others.png'></Image>
                <ItemTitle>Others</ItemTitle>
-               <FontAwesomeIcon icon={faArrowDown}/>
+               <FontAwesomeIcon icon={faArrowDown} size={'2x'}/>
            </ItemContainer>
         </Container>
     )
