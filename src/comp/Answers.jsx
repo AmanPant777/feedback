@@ -5,6 +5,7 @@ import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min'
 const Answers = ({location}) => {
      const {question,answer}=location.state
+     console.log(answer)
     const history=useHistory()
     return (
         <Container>
@@ -15,8 +16,20 @@ const Answers = ({location}) => {
             </HeaderTitle>
             </Header>
             <Answer>
-               {answer.line1}
+               {answer?.line1}
             </Answer>
+            <Answer>
+               {answer?.line2}
+            </Answer>
+            <Image src={answer?.image1}/>
+            <Answer>
+               {answer?.line3}
+            </Answer>
+            <Image src={answer?.image2}/>
+            <Answer>
+                {answer?.line4}
+            </Answer>
+            <Image src={answer?.image3}/>
             <Border>
             </Border>
             <IconContainer>
@@ -40,7 +53,7 @@ export default Answers
 
 const Container=styled.div`
 width: 100%;
-height: 100vh;
+height: 100%;
 `
 const Header=styled.div`
 display: flex;
@@ -118,4 +131,8 @@ const IconFooter=styled.div`
 padding: 40px;
 margin: auto;
 text-align: center;
+`
+const Image=styled.img`
+width: 50%;
+margin-left: 250px;
 `
