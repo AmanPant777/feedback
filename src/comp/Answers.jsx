@@ -21,24 +21,25 @@ const Answers = ({location}) => {
             <Answer>
                {answer?.line2}
             </Answer>
-            <Image src={answer?.image1}/>
+            {answer.image1&&  <Image src={answer?.image1}/> }
+           
             <Answer>
                {answer?.line3}
             </Answer>
-            <Image src={answer?.image2}/>
+            {answer.image2&&<Image src={answer?.image2}/>}
             <Answer>
                 {answer?.line4}
             </Answer>
-            <Image src={answer?.image3}/>
+            {answer.image3&&<Image src={answer?.image3}/>}
             <Border>
             </Border>
             <IconContainer>
                 <IconTitle>
-                    Is This  answer helpfull?
+                    Is this  answer helpfull ?
                 </IconTitle>
                 <Icons>
-                <img src="https://cdn-icons-png.flaticon.com/512/742/742940.png" alt="" width={40} height={40}/>
-                <img src="https://cdn-icons-png.flaticon.com/512/742/742774.png" alt="" width={40} height={40}/>
+                <img src="https://cdn-icons-png.flaticon.com/512/742/742940.png" alt="" width={30} height={30}/>
+                <img src="https://cdn-icons-png.flaticon.com/512/742/742774.png" alt="" width={30} height={30}/>
                 </Icons>
                 <IconFooter>
                     <h4>The Problem isn't solved </h4>
@@ -54,19 +55,22 @@ export default Answers
 const Container=styled.div`
 width: 100%;
 height: 100%;
+min-height: 100vh;
+
 `
 const Header=styled.div`
 display: flex;
-align-items: center;
-justify-content: space-between;
+align-items: baseline;
+justify-content: center;
 width: 95%;
 margin: auto;
 cursor: pointer;
 @media (max-width:768px){
 justify-content: space-around;
-margin-left: 20px;
+margin-left: 10px;
 position: relative;
 top: 40px;
+width: 70%;
 }
 `
 const HeaderTitle=styled.h2`
@@ -74,8 +78,9 @@ flex: 1;
 margin-left: 50px;
 font-size: 30px;
 @media (max-width:768px){
-    font-size: 20px;
+    font-size: 15px;
     margin-left: 10px;
+    width: 100vw;
 }
 `
 const Answer=styled.h3`
@@ -85,10 +90,10 @@ margin-right: auto;
 margin-top:100px;
 font-size: 20px;
 @media (max-width:768px){
-    width: 80%;
-    margin-left: 20%;
+    width: 60%;
+    margin-left: 10%;
     margin-top: 80px;
-    font-size: 15px;
+    font-size: 10px;
     overflow-x: hidden;
 }
 `
@@ -98,7 +103,7 @@ background-color: red;
 height: 2px;
 margin-top: 100px;
 @media (max-width:768px){
-    margin-top: 50px;
+    margin-top: 1px;
 }
 `
 const IconContainer=styled.div`
@@ -106,15 +111,16 @@ margin: auto;
 width: 30%;
 padding: 20px;
 @media (max-width:768px){
-    margin-top: 50px;
-    width: 100%;
+    margin-top: 5px;
+    width: 200px;
     text-align: center;
+    margin-left: 20px;
 }
 `
     
 const IconTitle=styled.h4`
 font-family: sans-serif;
-font-size: 20px;
+font-size: 10px;
 align-items: center;
 text-align: center;
 `
@@ -128,11 +134,16 @@ align-items: center;
 `
     
 const IconFooter=styled.div`
-padding: 40px;
+padding: 20px;
 margin: auto;
 text-align: center;
 `
 const Image=styled.img`
 width: 50%;
 margin-left: 250px;
+@media (max-width:768px){
+   margin-left: 10%;
+   background-position: center;
+   object-fit: contain;
+}
 `
