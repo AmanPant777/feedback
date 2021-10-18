@@ -7,6 +7,7 @@ const Answers = ({location}) => {
      const {question,answer}=location.state
      console.log(answer)
     const history=useHistory()
+   
     return (
         <Container>
             <Header onClick={()=>history.push('/')}>
@@ -22,7 +23,7 @@ const Answers = ({location}) => {
                {answer?.line2}
             </Answer>
             {answer.image1&&  <Image src={answer?.image1}/> }
-           
+            
             <Answer>
                {answer?.line3}
             </Answer>
@@ -31,6 +32,18 @@ const Answers = ({location}) => {
                 {answer?.line4}
             </Answer>
             {answer.image3&&<Image src={answer?.image3}/>}
+            {answer.answer2&&(
+                 <Or>
+                     <Answer>
+                         {answer.answer2.line1}
+                     </Answer>
+                     <Image src={answer.answer2.image1}/>
+                     <Answer>
+                         {answer.answer2.line2}
+                     </Answer>
+                     <Image src={answer.answer2.image2}/>
+                 </Or>
+             )}
             <Border>
             </Border>
             <IconContainer>
@@ -65,6 +78,8 @@ justify-content: center;
 width: 95%;
 margin: auto;
 cursor: pointer;
+top: 40px;
+position: relative;
 @media (max-width:768px){
 justify-content: space-around;
 margin-left: 10px;
@@ -140,10 +155,14 @@ text-align: center;
 `
 const Image=styled.img`
 width: 50%;
+margin-top: 20px;
 margin-left: 250px;
 @media (max-width:768px){
    margin-left: 10%;
    background-position: center;
    object-fit: contain;
 }
+`
+const Or=styled.div`
+
 `
