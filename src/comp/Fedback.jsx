@@ -9,12 +9,12 @@ import Feeds from './Feeds'
 
 const Fedback = () => {
     const [feedback,setFeedBack]=useState(false)
-    const [faq,setFaq]=useState(false)
+    const [faq,setFaq]=useState(true)
     return (
         <Container>
             <HeaderFeedBack>
                 <HeaderImage>
-                    <FontAwesomeIcon icon={faArrowLeft} size={'2x'} />
+                    <FontAwesomeIcon icon={faArrowLeft} size={'1x'} />
                 </HeaderImage>
                 <HeaderTitle>Help & Feedback</HeaderTitle>
             </HeaderFeedBack>
@@ -23,6 +23,7 @@ const Fedback = () => {
                     <Faq onClick={()=>{
                         setFaq(true)
                         setFeedBack(false)
+
                         }}>FAQ</Faq>
                     <Feed  onClick={()=>{
                          setFeedBack(true)
@@ -34,7 +35,7 @@ const Fedback = () => {
                     <FeedBackBorder active={feedback}></FeedBackBorder>
                 </Border>
                 <FeedBackValue>
-                    {faq?<Item/>:<Feeds/>}
+                    {!faq?<Feeds/>:<Item/>}
                 </FeedBackValue>
             </FeedBack>
         </Container>
@@ -44,13 +45,14 @@ export default Fedback
 
 const Container = styled.div`
 color: white;
-height: 80%;
+
 `
 
 const HeaderFeedBack = styled.div`
 display: flex;
 padding: 5px;
-margin-left: 20px;
+margin-left: 85px;
+padding: 20px;
 color: white;
 align-items: center;
 `
@@ -60,11 +62,11 @@ color: white;
 `
 const HeaderTitle = styled.h1`
 font-weight: 800;
-margin-left: 30px;
-
+margin-left: 25px;
+font-size:25px;
 `
 const FeedBack = styled.div`
-
+width: 70%;
 `
 const FeedBackTitle = styled.div`
 display: flex;
@@ -76,10 +78,10 @@ padding: 10px;
 `
 
 const FeedBackValue = styled.div`
-width: 96%;
+width: 80%;
 margin: auto;
-margin-left: 20px;
-padding: 10px;
+margin-left: 80px;
+padding: 1px;
 margin-top: 20px;
 `
 const Faq=styled.h2`
@@ -93,6 +95,9 @@ background-color: gray;
 height: 4px;
 display: flex;
 position: relative;
+width: 85%;
+margin: auto;
+margin-top: -10px;
 `
 const FaqBorder=styled.div`
 ${({active})=>active&&`background-color:red;`}

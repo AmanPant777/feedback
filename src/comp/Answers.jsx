@@ -22,17 +22,17 @@ const Answers = ({location}) => {
             <Answer>
                {answer?.line2}
             </Answer>
-            {answer.image1&&  <Image src={answer?.image1}/> }
+            {answer?.image1&&  <Image src={answer?.image1}/> }
             
             <Answer>
                {answer?.line3}
             </Answer>
-            {answer.image2&&<Image src={answer?.image2}/>}
+            {answer?.image2&&<Image src={answer?.image2}/>}
             <Answer>
                 {answer?.line4}
             </Answer>
-            {answer.image3&&<Image src={answer?.image3}/>}
-            {answer.answer2&&(
+            {answer?.image3&&<Image src={answer?.image3}/>}
+            {answer?.answer2&&(
                  <Or>
                      <Answer>
                          {answer.answer2.line1}
@@ -47,7 +47,7 @@ const Answers = ({location}) => {
              <Answer>
                 {answer?.line5}
             </Answer>
-            {answer.image4&&<Image src={answer?.image4}/>}
+            {answer?.image4&&<Image src={answer?.image4}/>}
             <Border>
             </Border>
             <IconContainer>
