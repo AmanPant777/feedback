@@ -6,11 +6,13 @@ import Audio from './Question/Audio'
 import Download from './Question/Download'
 import Premium from './Question/Premium'
 import Video from './Question/Video'
+import VideoHide from './Question/VideoHide'
 const Item = () => {
     const [videos,setVideos]=useState(false)
     const [audio,setAudio]=useState(false)
     const [download,setDownload]=useState(false)
     const [premium,setPremium]=useState(false)
+    const [videoHide,setVideoHide]=useState(false)
     return (
         <Container>
             <div>
@@ -60,6 +62,12 @@ const Item = () => {
                <ItemTitle>Others</ItemTitle>
                <FontAwesomeIcon icon={faArrowDown} size={'2x'}/>
            </ItemContainer>
+           <ItemContainer onClick={()=>setVideoHide(!videoHide)}>
+               <Image src='/images/trnding.png'></Image>
+               <ItemTitle>Video Hider Issues</ItemTitle>
+               <FontAwesomeIcon icon={faArrowDown} size={'2x'}/>
+           </ItemContainer>
+           {videoHide&&<Question><VideoHide/></Question>}
         </Container>
     )
 }

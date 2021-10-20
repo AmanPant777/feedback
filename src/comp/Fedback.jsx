@@ -84,7 +84,6 @@ margin-top: 20px;
 `
 const Faq=styled.h2`
 cursor: pointer;
-
 `
 const Feed=styled.h2`
 cursor: pointer;

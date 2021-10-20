@@ -7,14 +7,14 @@ const Answers = ({location}) => {
      const {question,answer}=location.state
      console.log(answer)
     const history=useHistory()
-   
+
     return (
         <Container>
             <Header onClick={()=>history.push('/')}>
-            <FontAwesomeIcon icon={faArrowLeft} size={60} />
-            <HeaderTitle>
+             <FontAwesomeIcon icon={faArrowLeft} size={60} />
+               <HeaderTitle>
                    { question}
-            </HeaderTitle>
+               </HeaderTitle>
             </Header>
             <Answer>
                {answer?.line1}
@@ -44,6 +44,10 @@ const Answers = ({location}) => {
                      <Image src={answer.answer2.image2}/>
                  </Or>
              )}
+             <Answer>
+                {answer?.line5}
+            </Answer>
+            {answer.image4&&<Image src={answer?.image4}/>}
             <Border>
             </Border>
             <IconContainer>
