@@ -75,6 +75,7 @@ justify-content: space-around;
 width: 90%;
 margin: 20px auto;
 padding: 10px;
+font-size:15px;
 `
 
 const FeedBackValue = styled.div`

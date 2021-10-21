@@ -5,6 +5,7 @@ import styled from 'styled-components'
 import Audio from './Question/Audio'
 import Browser from './Question/Browser'
 import Download from './Question/Download'
+import Others from './Question/Others'
 import Premium from './Question/Premium'
 import Trending from './Question/Trending'
 import Video from './Question/Video'
@@ -17,13 +18,14 @@ const Item = () => {
     const [videoHide,setVideoHide]=useState(false)
     const [trending,setTrending]=useState(false)
     const [browser,setBrowser]=useState(false)
+    const [others,setOthers]=useState(false)
     return (
         <Container>
             <div>
             <ItemContainer onClick={()=>setVideos(!videos)}>
                <Image src='/images/video.png'></Image>
                <ItemTitle>Video</ItemTitle>
-               <FontAwesomeIcon icon={faArrowDown} size={'1x'}/>
+               <img src='/images/next-down.svg' width={20}/>
            </ItemContainer>
            {videos&& <Question>
                <Video/>
@@ -33,7 +35,7 @@ const Item = () => {
             <ItemContainer onClick={()=>setAudio(!audio)}>
                <Image src='/images/music.png'></Image>
                <ItemTitle>Audio</ItemTitle>
-               <FontAwesomeIcon icon={faArrowDown} size={'1x'}/>
+               <img src='/images/next-down.svg' width={20}/>
            </ItemContainer>
            {audio&& <Question>
                <Audio/>
@@ -43,7 +45,7 @@ const Item = () => {
             <ItemContainer onClick={()=>setDownload(!download)}>
                <Image src='/images/download.png'></Image>
                <ItemTitle>Download Issues</ItemTitle>
-               <FontAwesomeIcon icon={faArrowDown} size={'1x'}/>
+               <img src='/images/next-down.svg' width={20}/>
            </ItemContainer>
            {download&& <Question><Download/></Question> }
             </div>
@@ -51,32 +53,33 @@ const Item = () => {
            <ItemContainer onClick={()=>setBrowser(!browser)}>
                <Image src='/images/browser.png'></Image>
                <ItemTitle>Browser Issue</ItemTitle>
-               <FontAwesomeIcon icon={faArrowDown} size={'1x'}/>
+               <img src='/images/next-down.svg' width={20}/>
            </ItemContainer>
            {browser&&<Question><Browser/></Question>}
            <div>
            <ItemContainer onClick={()=>setPremium(!premium)}>
                <Image src='/images/vip.png'></Image>
                <ItemTitle>Premium</ItemTitle>
-               <FontAwesomeIcon icon={faArrowDown} size={'1x'}/>
+               <img src='/images/next-down.svg' width={20}/>
            </ItemContainer>
            {premium&&<Question><Premium/></Question>}
            </div>
-           <ItemContainer>
+           <ItemContainer onClick={()=>setOthers(!others)}>
                <Image src='/images/others.png'></Image>
                <ItemTitle>Others</ItemTitle>
-               <FontAwesomeIcon icon={faArrowDown} size={'1x'}/>
+               <img src='/images/next-down.svg' width={20}/>
            </ItemContainer>
+           {others&& <Question><Others/></Question>}
            <ItemContainer onClick={()=>setTrending(!trending)}>
                <Image src='/images/trnding.png'></Image>
                <ItemTitle>Trending Videos</ItemTitle>
-               <FontAwesomeIcon icon={faArrowDown} size={'1x'}/>
+               <img src='/images/next-down.svg' width={20}/>
            </ItemContainer>
            {trending&&<Question><Trending/></Question>}
            <ItemContainer onClick={()=>setVideoHide(!videoHide)}>
-               <Image src='/images/trnding.png'></Image>
+               <Image src='/images/hide.png'></Image>
                <ItemTitle>Video Hider Issues</ItemTitle>
-               <FontAwesomeIcon icon={faArrowDown} size={'1x'}/>
+               <img src='/images/next-down.svg' width={20}/>
            </ItemContainer>
            {videoHide&&<Question><VideoHide/></Question>}
         </Container>
@@ -86,11 +89,11 @@ export default Item
 
 const Container=styled.div`
 height: 100%;
-width: 100%;
+width: 800px;
 margin: auto;
 `
 const ItemContainer=styled.div`
-padding: 20px;
+padding: 10px;
 display: flex;
 justify-content: space-between;
 align-items: center;

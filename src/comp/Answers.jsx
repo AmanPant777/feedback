@@ -23,29 +23,33 @@ const Answers = ({location}) => {
                {answer?.line2}
             </Answer>
             {answer?.image1&&  <Image src={answer?.image1}/> }
-            
-            <Answer>
+
+            {answer.line3&& <Answer>
                {answer?.line3}
-            </Answer>
+            </Answer> }
+           
             {answer?.image2&&<Image src={answer?.image2}/>}
-            <Answer>
+            
+            
+            {answer.line4&&   <Answer>
                 {answer?.line4}
-            </Answer>
+            </Answer>}
+          
             {answer?.image3&&<Image src={answer?.image3}/>}
             {answer?.answer2&&(
                  <Or>
                      <Answer>
-                         {answer.answer2.line1}
+                         {answer?.answer2.line1}
                      </Answer>
-                     <Image src={answer.answer2.image1}/>
+                     <Image src={answer?.answer2.image1}/>
                      <Answer>
-                         {answer.answer2.line2}
+                         {answer?.answer2.line2}
                      </Answer>
-                     <Image src={answer.answer2.image2}/>
+                     <Image src={answer?.answer2.image2}/>
                  </Or>
              )}
              <Answer>
-                {answer?.line5}
+                {answer.line5&&answer.line5}
             </Answer>
             {answer?.image4&&<Image src={answer?.image4}/>}
             <Border>
@@ -55,20 +59,19 @@ const Answers = ({location}) => {
                     Is this  answer helpfull ?
                 </IconTitle>
                 <Icons>
-                <img src="https://cdn-icons-png.flaticon.com/512/742/742940.png" alt="" width={30} height={30}/>
-                <img src="https://cdn-icons-png.flaticon.com/512/742/742774.png" alt="" width={30} height={30}/>
+                    <IconImage src='/images/happy.svg'/>
+                    <IconImage src='/images/sad.svg'/>
+
                 </Icons>
                 <IconFooter>
                     <h4>The Problem isn't solved </h4>
-                    <h5 style={{color:'red',marginTop:20,}}>Send us feedback</h5>
+                    <h4 style={{color:'red',marginTop:20,}}>Send us feedback</h4>
                 </IconFooter>
             </IconContainer>
         </Container>
     )
 }
-
 export default Answers
-
 const Container=styled.div`
 width: 100%;
 height: 100%;
@@ -82,7 +85,7 @@ justify-content: center;
 width: 95%;
 margin: auto;
 cursor: pointer;
-top: 40px;
+top: 20px;
 position: relative;
 @media (max-width:768px){
 justify-content: space-around;
@@ -95,7 +98,7 @@ width: 70%;
 const HeaderTitle=styled.h2`
 flex: 1;
 margin-left: 50px;
-font-size: 30px;
+font-size: 20px;
 @media (max-width:768px){
     font-size: 15px;
     margin-left: 10px;
@@ -104,7 +107,7 @@ font-size: 30px;
 `
 const Answer=styled.h3`
 width: 70%;
-margin-left: 200px;
+margin-left: 35px;
 margin-right: auto;
 margin-top:100px;
 font-size: 20px;
@@ -139,7 +142,7 @@ padding: 20px;
     
 const IconTitle=styled.h4`
 font-family: sans-serif;
-font-size: 10px;
+font-size: 20px;
 align-items: center;
 text-align: center;
 `
@@ -161,6 +164,9 @@ const Image=styled.img`
 width: 50%;
 margin-top: 20px;
 margin-left: 250px;
+object-fit: contain;
+padding: 20px;
+margin-top: 70px;
 @media (max-width:768px){
    margin-left: 10%;
    background-position: center;
@@ -169,4 +175,12 @@ margin-left: 250px;
 `
 const Or=styled.div`
 
+`
+const IconImage=styled.img`
+width: 100px;
+height: 100px;
+@media (max-width:768px){
+    width: 50px;
+    height: 50px;
+}
 `

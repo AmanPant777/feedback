@@ -4,7 +4,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { useHistory } from 'react-router-dom'
 const data=[
-    {
+    {  id:"1",
        question:'Q1.How can I hide my private videos in rocks player?',
        answer:{
            line2:'1.Click on three dots.',
@@ -13,13 +13,13 @@ const data=[
            image2:'/images/videohider/vhiQ1P2.png'
        }
     },
-    {
+    {   id:'2',
         question:'Q2.Why is it necessary to add an email id?',
         answer:{  line1:'We ask yu to add gmail id so that it can help yu to recover yur Pin in case yu forgot the pin of yur private folder yu can easily recover from this email id.',
                 image1:'/images/videohider/vhiQ2P1.png'
     }
     },
-    {
+    {   id:'3',
         question:'Q3.Want to change the pin in case of forgetting the pin?',
         answer:{  line1:'Yu can tap to forget pin option and there yu have to enter id yu have mentioned while creating the pin.And then yur pin will be recoverd easily. ',
                 line2:'1.Click on Forget Pin .',
@@ -28,7 +28,7 @@ const data=[
                 image2:'/images/videohider/vhiQ3P2.png'
     }
     },
-    {
+    {  id:'4',
         question:'Q4.How to unlock the video placed in a private folder?',
         answer:{
             line2:'1.Click on Lock folder icon.',
@@ -50,11 +50,11 @@ const VideoHide = () => {
             {data.map((item)=>{
                 return (
                   <Container onClick={()=>history.push({
-                      pathname:'/answer',
-                      state:{question:item.question,answer:item.answer}
+                      pathname:'/hideranswer',
+                      state:{question:item.question,answer:item.answer,id:item.id}
                   })}>
                       <Questions>{item.question}</Questions>
-                      <FontAwesomeIcon icon={faArrowRight}/>
+                      <img src="/images/next.svg" alt="" width={15}/>
                   </Container>
                 )
             })}
