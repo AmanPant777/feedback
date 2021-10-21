@@ -56,7 +56,7 @@ const Download = () => {
                       state:{question:item.question,answer:item.answer}
                   })}>
                       <Questions>{item.question}</Questions>
-                      <FontAwesomeIcon icon={faArrowRight}/>
+                      <img src="/images/next.svg" alt="" width={15}/>
                   </Container>
                 )
             })}
