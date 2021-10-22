@@ -11,8 +11,8 @@ const AudioAnswer = ({location}) => {
     return (
         <Container>
             {id==='1'&&(
-                <InnerContainer onClick={()=>history.push('/')}>
-                    <Question >
+                <InnerContainer >
+                    <Question onClick={()=>history.push('/')}>
                       <FontAwesomeIcon icon={faArrowLeft}/>
                       <h3 style={{marginLeft:20}}>{question}</h3>
                    </Question>
@@ -28,8 +28,8 @@ const AudioAnswer = ({location}) => {
                 </InnerContainer>
             )}
             {id==='2'&&(
-                <InnerContainer onClick={()=>history.push('/')}>
-                     <Question>
+                <InnerContainer >
+                     <Question onClick={()=>history.push('/')}>
                       <FontAwesomeIcon icon={faArrowLeft}/>
                       <h3 style={{marginLeft:20}}>{question}</h3>
                    </Question>
@@ -39,8 +39,8 @@ const AudioAnswer = ({location}) => {
                 </InnerContainer>
             )}
             {id==='3'&&(
-                <InnerContainer onClick={()=>history.push('/')}>
-                     <Question>
+                <InnerContainer >
+                     <Question onClick={()=>history.push('/')}>
                       <FontAwesomeIcon icon={faArrowLeft}/>
                       <h3 style={{marginLeft:20}}>{question}</h3>
                    </Question>
@@ -51,8 +51,8 @@ const AudioAnswer = ({location}) => {
             )}
             {
                 id==='4'&&(
-                    <InnerContainer onClick={()=>history.push('/')}>
-                    <Question>
+                    <InnerContainer >
+                    <Question onClick={()=>history.push('/')}>
                      <FontAwesomeIcon icon={faArrowLeft}/>
                      <h3 style={{marginLeft:20}}>{question}</h3>
                   </Question>
@@ -62,8 +62,8 @@ const AudioAnswer = ({location}) => {
                 )
             }
             {id==='5'&&(
-                <InnerContainer onClick={()=>history.push('/')}>
-                <Question>
+                <InnerContainer >
+                <Question onClick={()=>history.push('/')}>
                  <FontAwesomeIcon icon={faArrowLeft}/>
                  <h3 style={{marginLeft:20}}>{question}</h3>
               </Question>
@@ -97,7 +97,7 @@ height: 100%;
 `
 const Question=styled.div`
 display: flex;
-align-items: center;
+align-items: baseline;
 padding: 20px;
 margin-left: 20px;
 font-size:18px;

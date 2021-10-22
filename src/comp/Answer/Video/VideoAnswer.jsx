@@ -11,8 +11,8 @@ const VideoAnswer = ({location}) => {
     return (
         <Container>
             {id==='1'&&(
-                <InnerContainer onClick={()=>history.push('/')}>
-                <Question>
+                <InnerContainer  >
+                <Question onClick={()=>history.push('/')}>
                  <FontAwesomeIcon icon={faArrowLeft}/>
                  <h3 style={{marginLeft:20}}>{question}</h3>
               </Question>
@@ -26,8 +26,8 @@ const VideoAnswer = ({location}) => {
            </InnerContainer>
             )}
             {id==='2'&&(
-                <InnerContainer onClick={()=>history.push('/')}>
-                <Question>
+                <InnerContainer >
+                <Question onClick={()=>history.push('/')}>
                  <FontAwesomeIcon icon={faArrowLeft}/>
                  <h3 style={{marginLeft:20}}>{question}</h3>
               </Question>
@@ -36,8 +36,8 @@ const VideoAnswer = ({location}) => {
            </InnerContainer>
             )}
              {id==='3'&&(
-                <InnerContainer onClick={()=>history.push('/')}>
-                <Question>
+                <InnerContainer >
+                <Question onClick={()=>history.push('/')}>
                  <FontAwesomeIcon icon={faArrowLeft}/>
                  <h3 style={{marginLeft:20}}>{question}</h3>
               </Question>
@@ -45,8 +45,8 @@ const VideoAnswer = ({location}) => {
            </InnerContainer>
             )}
              {id==='4'&&(
-                <InnerContainer onClick={()=>history.push('/')}>
-                <Question>
+                <InnerContainer >
+                <Question onClick={()=>history.push('/')}>
                  <FontAwesomeIcon icon={faArrowLeft}/>
                  <h3 style={{marginLeft:20}}>{question}</h3>
               </Question>
@@ -54,8 +54,8 @@ const VideoAnswer = ({location}) => {
            </InnerContainer>
             )}
             {id==='5'&&(
-                <InnerContainer onClick={()=>history.push('/')}>
-                <Question>
+                <InnerContainer >
+                <Question onClick={()=>history.push('/')}>
                  <FontAwesomeIcon icon={faArrowLeft}/>
                  <h3 style={{marginLeft:20}}>{question}</h3>
               </Question>
@@ -65,8 +65,8 @@ const VideoAnswer = ({location}) => {
                <Answer1 oneAnswer={true}>{answer.line3}</Answer1>       
            </InnerContainer>
             )} {id==='6'&&(
-                <InnerContainer onClick={()=>history.push('/')}>
-                <Question>
+                <InnerContainer >
+                <Question onClick={()=>history.push('/')}>
                  <FontAwesomeIcon icon={faArrowLeft}/>
                  <h3 style={{marginLeft:20}}>{question}</h3>
               </Question>
@@ -75,8 +75,8 @@ const VideoAnswer = ({location}) => {
            </InnerContainer>
             )}
             {id==='7'&&(
-                <InnerContainer onClick={()=>history.push('/')}>
-                <Question>
+                <InnerContainer >
+                <Question onClick={()=>history.push('/')}>
                  <FontAwesomeIcon icon={faArrowLeft}/>
                  <h3 style={{marginLeft:20}}>{question}</h3>
               </Question>
@@ -85,8 +85,8 @@ const VideoAnswer = ({location}) => {
            </InnerContainer>
             )}
             {id==='8'&&(
-                <InnerContainer onClick={()=>history.push('/')}>
-                <Question>
+                <InnerContainer >
+                <Question onClick={()=>history.push('/')}>
                  <FontAwesomeIcon icon={faArrowLeft}/>
                  <h3 style={{marginLeft:20}}>{question}</h3>
               </Question>
@@ -97,8 +97,8 @@ const VideoAnswer = ({location}) => {
            </InnerContainer>
             )}
             {id==='9'&&(
-                <InnerContainer onClick={()=>history.push('/')}>
-                <Question>
+                <InnerContainer >
+                <Question onClick={()=>history.push('/')}>
                  <FontAwesomeIcon icon={faArrowLeft}/>
                  <h3 style={{marginLeft:20}}>{question}</h3>
               </Question>
@@ -108,8 +108,8 @@ const VideoAnswer = ({location}) => {
            </InnerContainer>
             )}
             {id==='10'&&(
-                <InnerContainer onClick={()=>history.push('/')}>
-                <Question>
+                <InnerContainer >
+                <Question onClick={()=>history.push('/')}>
                  <FontAwesomeIcon icon={faArrowLeft}/>
                  <h3 style={{marginLeft:20}}>{question}</h3>
               </Question>
@@ -118,8 +118,8 @@ const VideoAnswer = ({location}) => {
            </InnerContainer>
             )}
              {id==='11'&&(
-                <InnerContainer onClick={()=>history.push('/')}>
-                <Question>
+                <InnerContainer >
+                <Question onClick={()=>history.push('/')}>
                  <FontAwesomeIcon icon={faArrowLeft}/>
                  <h3 style={{marginLeft:20}}>{question}</h3>
               </Question>
@@ -128,8 +128,8 @@ const VideoAnswer = ({location}) => {
            </InnerContainer>
             )}
             {id==='12'&&(
-              <InnerContainer onClick={()=>history.push('/')}>
-              <Question>
+              <InnerContainer >
+              <Question onClick={()=>history.push('/')}>
                <FontAwesomeIcon icon={faArrowLeft}/>
                <h3 style={{marginLeft:20}}>{question}</h3>
             </Question>
@@ -138,8 +138,8 @@ const VideoAnswer = ({location}) => {
          </InnerContainer>
             )}
              {id==='13'&&(
-              <InnerContainer onClick={()=>history.push('/')}>
-              <Question>
+              <InnerContainer >
+              <Question onClick={()=>history.push('/')}>
                <FontAwesomeIcon icon={faArrowLeft}/>
                <h3 style={{marginLeft:20}}>{question}</h3>
             </Question>
@@ -147,8 +147,8 @@ const VideoAnswer = ({location}) => {
          </InnerContainer>
             )}
             {id==='14'&&(
-              <InnerContainer onClick={()=>history.push('/')}>
-              <Question>
+              <InnerContainer >
+              <Question onClick={()=>history.push('/')}>
                <FontAwesomeIcon icon={faArrowLeft}/>
                <h3 style={{marginLeft:20}}>{question}</h3>
             </Question>
@@ -156,8 +156,8 @@ const VideoAnswer = ({location}) => {
          </InnerContainer>
             )}
              {id==='15'&&(
-              <InnerContainer onClick={()=>history.push('/')}>
-              <Question>
+              <InnerContainer >
+              <Question onClick={()=>history.push('/')}>
                <FontAwesomeIcon icon={faArrowLeft}/>
                <h3 style={{marginLeft:20}}>{question}</h3>
             </Question>
@@ -166,8 +166,8 @@ const VideoAnswer = ({location}) => {
          </InnerContainer>
             )}
              {id==='16'&&(
-              <InnerContainer onClick={()=>history.push('/')}>
-              <Question>
+              <InnerContainer >
+              <Question onClick={()=>history.push('/')}>
                <FontAwesomeIcon icon={faArrowLeft}/>
                <h3 style={{marginLeft:20}}>{question}</h3>
             </Question>
@@ -180,8 +180,8 @@ const VideoAnswer = ({location}) => {
          </InnerContainer>
             )}
             {id==='17'&&(
-              <InnerContainer onClick={()=>history.push('/')}>
-              <Question>
+              <InnerContainer >
+              <Question onClick={()=>history.push('/')}>
                <FontAwesomeIcon icon={faArrowLeft}/>
                <h3 style={{marginLeft:20}}>{question}</h3>
             </Question>
@@ -213,7 +213,7 @@ height: 100%;
 `
 const Question=styled.div`
 display: flex;
-align-items: center;
+align-items: baseline;
 padding: 20px;
 margin-left: 20px;
 font-size:18px;

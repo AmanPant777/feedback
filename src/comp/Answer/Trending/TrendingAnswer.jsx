@@ -10,10 +10,10 @@ const PremiumAnswer = ({location}) => {
     const {question,answer,id}=location.state
     console.log(id)
     return (
-        <Container onClick={()=>history.push('/')}>
+        <Container >
             {id==="1"&&(
                 <InnerContainer>
-                    <Question>
+                    <Question onClick={()=>history.push('/')}>
                         <FontAwesomeIcon icon={faArrowLeft}/>
                         <h3 style={{marginLeft:20}}>{question}</h3>
                     </Question>
@@ -29,8 +29,8 @@ const PremiumAnswer = ({location}) => {
             )}
             {
                 id==="2"&&(
-                    <InnerContainer onClick={()=>history.push('/')}>
-                         <Question>
+                    <InnerContainer>
+                         <Question onClick={()=>history.push('/')}>
                         <FontAwesomeIcon icon={faArrowLeft}/>
                         <h3 style={{marginLeft:20}}>{question}</h3>
                     </Question>
@@ -47,8 +47,8 @@ const PremiumAnswer = ({location}) => {
             }
             {
                 id==="3"&&(
-                    <InnerContainer onClick={()=>history.push('/')}>
-                        <Question>
+                    <InnerContainer >
+                        <Question onClick={()=>history.push('/')}>
                         <FontAwesomeIcon icon={faArrowLeft}/>
                         <h3 style={{marginLeft:20}}>{question}</h3>
                     </Question>
@@ -64,8 +64,8 @@ const PremiumAnswer = ({location}) => {
             }
             {
                 id==="4"&&(
-                    <InnerContainer onClick={()=>history.push('/')}>
-                         <Question>
+                    <InnerContainer>
+                         <Question onClick={()=>history.push('/')}>
                         <FontAwesomeIcon icon={faArrowLeft}/>
                         <h3 style={{marginLeft:20}}>{question}</h3>
                     </Question>
