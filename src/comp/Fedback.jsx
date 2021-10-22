@@ -35,7 +35,8 @@ const Fedback = () => {
                     <FeedBackBorder active={feedback}></FeedBackBorder>
                 </Border>
                 <FeedBackValue>
-                    {!faq?<Feeds/>:<Item/>}
+                    {/* {!faq?<Feeds/>:<Item/>} */}
+                    <Item/>
                 </FeedBackValue>
             </FeedBack>
         </Container>
