@@ -40,7 +40,7 @@ const data=[
         }
     },
     {   id:"5",
-        question:'Q4.How can i enable the incognito tab in the browser?',
+        question:'Q5.How can i enable the incognito tab in the browser?',
         answer:{
             line1:'Sorry for the inconvenience.',
             line2:'But the Rocks Video Player doesn\'t support the ignito tab.But our team is working on it and surely yu will find it in upcoming version.',

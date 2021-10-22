@@ -29,9 +29,9 @@ border-top: 2px solid red;
 margin-top: 100px;
 @media (max-width:768px){
     margin-top: 5px;
-    width: 200px;
+    width: 90%;
     text-align: center;
-    margin-left: 20px;
+    margin-left: 0px;
 }
 `
 const IconTitle=styled.h4`
@@ -40,6 +40,9 @@ font-size: 30px;
 margin-top:30px;
 align-items: center;
 text-align: center;
+@media (max-width:768px){
+    font-size: 25px;
+}
 `
     
 const Icons=styled.div`
@@ -50,6 +53,11 @@ padding: 20px;
 margin: auto;
 margin-top: 20px;
 align-items: center;
+@media (max-width:768px){
+    margin-top: 10px;
+    justify-content: space-between;
+    width: 50%;
+}
 `
 const IconFooter=styled.div`
 padding: 20px;

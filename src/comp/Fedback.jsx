@@ -45,7 +45,6 @@ export default Fedback
 
 const Container = styled.div`
 color: white;
-
 `
 
 const HeaderFeedBack = styled.div`
@@ -55,6 +54,9 @@ margin-left: 85px;
 padding: 20px;
 color: white;
 align-items: center;
+@media (max-width: 768px) {
+    margin-left:0;
+}
 `
 const HeaderImage = styled.div`
 color: white;
@@ -64,9 +66,15 @@ const HeaderTitle = styled.h1`
 font-weight: 800;
 margin-left: 25px;
 font-size:25px;
+@media (max-width: 768px) {
+    font-size: 15px;
+}
 `
 const FeedBack = styled.div`
 width: 70%;
+@media (max-width: 768px) {
+    width: 100%;
+}
 `
 const FeedBackTitle = styled.div`
 display: flex;
@@ -76,6 +84,9 @@ width: 90%;
 margin: 20px auto;
 padding: 10px;
 font-size:15px;
+@media (max-width: 768px) {
+    font-size: 10px;
+}
 `
 
 const FeedBackValue = styled.div`
@@ -84,6 +95,10 @@ margin: auto;
 margin-left: 80px;
 padding: 1px;
 margin-top: 20px;
+@media (max-width: 768px) {
+    margin-left: 15px;
+    width: 90%;
+}
 `
 const Faq=styled.h2`
 cursor: pointer;

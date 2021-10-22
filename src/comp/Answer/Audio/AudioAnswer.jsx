@@ -3,14 +3,16 @@ import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 import Icon from '../Icons'
+import {useHistory} from 'react-router-dom'
 
 const AudioAnswer = ({location}) => {
+    const history = useHistory()
     const {question,answer,id}=location.state
     return (
         <Container>
             {id==='1'&&(
-                <InnerContainer>
-                    <Question>
+                <InnerContainer onClick={()=>history.push('/')}>
+                    <Question >
                       <FontAwesomeIcon icon={faArrowLeft}/>
                       <h3 style={{marginLeft:20}}>{question}</h3>
                    </Question>
@@ -26,7 +28,7 @@ const AudioAnswer = ({location}) => {
                 </InnerContainer>
             )}
             {id==='2'&&(
-                <InnerContainer>
+                <InnerContainer onClick={()=>history.push('/')}>
                      <Question>
                       <FontAwesomeIcon icon={faArrowLeft}/>
                       <h3 style={{marginLeft:20}}>{question}</h3>
@@ -37,7 +39,7 @@ const AudioAnswer = ({location}) => {
                 </InnerContainer>
             )}
             {id==='3'&&(
-                <InnerContainer>
+                <InnerContainer onClick={()=>history.push('/')}>
                      <Question>
                       <FontAwesomeIcon icon={faArrowLeft}/>
                       <h3 style={{marginLeft:20}}>{question}</h3>
@@ -49,18 +51,18 @@ const AudioAnswer = ({location}) => {
             )}
             {
                 id==='4'&&(
-                    <InnerContainer>
+                    <InnerContainer onClick={()=>history.push('/')}>
                     <Question>
                      <FontAwesomeIcon icon={faArrowLeft}/>
                      <h3 style={{marginLeft:20}}>{question}</h3>
                   </Question>
-                  <Answer1>{answer.line1}</Answer1>
+                  <Answer1 oneAnswer={true}>{answer.line1}</Answer1>
                  
                </InnerContainer>
                 )
             }
             {id==='5'&&(
-                <InnerContainer>
+                <InnerContainer onClick={()=>history.push('/')}>
                 <Question>
                  <FontAwesomeIcon icon={faArrowLeft}/>
                  <h3 style={{marginLeft:20}}>{question}</h3>
@@ -84,6 +86,10 @@ width:100%;
 height:100%;
 color:white;
 min-height: 100%;
+@media (max-width:768px){
+   height: 100%;
+   min-height:100vh;
+}
 `
 const InnerContainer=styled.div`
 margin-left: 4%;
@@ -95,16 +101,31 @@ align-items: center;
 padding: 20px;
 margin-left: 20px;
 font-size:18px;
+@media (max-width:768px){
+   font-size:15px;
+   margin-left: 0;
+}
 `
 const Answer1=styled.div`
 margin-left:3%;
 margin-top: 40px;
 margin-bottom:40px;
+@media (max-width:768px){
+   margin-bottom: -10px;
+   margin-bottom: ${props=>props.oneAnswer?'40px':'-10px'};
+}
 `
 const Image1=styled.img`
 margin-left:200px;
 height:300px;
 width: 400px;
+@media (max-width:768px){
+   margin-left: 5%;
+   width: 300px;
+   height: 400px;
+   object-fit: contain;
+   margin-top: 0;
+}
 `
 const Answer1Red=styled.div`
  color:red;
@@ -120,6 +141,9 @@ margin-top:40px;
 height: 500px;
 width: 350px;
 object-fit: contain;
+@media (max-width:768px){
+   margin-left:5%;
+}
 `
 const Answer=styled.div`
 font-size: 30px;

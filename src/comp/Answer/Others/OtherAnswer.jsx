@@ -2,13 +2,17 @@ import React from 'react'
 import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
+import {useHistory} from 'react-router-dom'
+import Icon from '../Icons'
+
 const OtherAnswer = ({location}) => {
     const {question,answer,id}=location.state
+    const history = useHistory()
     return (
        <Container>
          {id==='1'&& 
          (
-             <InnerContainer>
+             <InnerContainer onClick={()=>history.push('/')}>
                  <Question>
                     <FontAwesomeIcon icon={faArrowLeft}/>
                     <h3 style={{marginLeft:20}}>{question}</h3>
@@ -19,7 +23,7 @@ const OtherAnswer = ({location}) => {
                  <Answer2>
                    {answer.line2}
                  </Answer2>
-                 <Answer2>
+                 <Answer2 oneAnswer={true}>
                     {answer.line3}
                  </Answer2>
              </InnerContainer>
@@ -29,7 +33,7 @@ const OtherAnswer = ({location}) => {
 
 
          {id==="2"&&(
-             <InnerContainer>
+             <InnerContainer onClick={()=>history.push('/')}>
               <Question>
               <FontAwesomeIcon icon={faArrowLeft}/>
               <h3 style={{marginLeft:20}}>{question}</h3>
@@ -47,7 +51,7 @@ const OtherAnswer = ({location}) => {
          )}
          {
              id==="3"&&(
-               <InnerContainer>
+               <InnerContainer onClick={()=>history.push('/')}>
                  <Question>
                  <FontAwesomeIcon icon={faArrowLeft}/>
                  <h3 style={{marginLeft:20}}>{question}</h3>
@@ -72,7 +76,7 @@ const OtherAnswer = ({location}) => {
          }
           {
               id==='4'&&(
-                  <InnerContainer>
+                  <InnerContainer onClick={()=>history.push('/')}>
                        <Question>
                          <FontAwesomeIcon icon={faArrowLeft}/>
                         <h3 style={{marginLeft:20}}>{question}</h3>
@@ -86,7 +90,7 @@ const OtherAnswer = ({location}) => {
           }
           {
               id==='5'&&(
-                  <InnerContainer>
+                  <InnerContainer onClick={()=>history.push('/')}>
                       <Question>
                          <FontAwesomeIcon icon={faArrowLeft}/>
                         <h3 style={{marginLeft:20}}>{question}</h3>
@@ -95,24 +99,11 @@ const OtherAnswer = ({location}) => {
                            {answer.line1}
                        </Answer3>
                        <Image1 src='/images/others/OQ5P1.png'/>
-                       <h2 style={{margin:'auto',width:'40%',marginTop:60,fontWeight:'bold'}}>{answer.line2}</h2>
+                       <h2  style={{margin:'auto',width:'80%',marginTop:60,fontWeight:'bold',textAlign:'center'}}>{answer.line2}</h2>
                   </InnerContainer>
               )
           }
-          <IconContainer>
-                <IconTitle>
-                    Is this  answer helpfull ?
-                </IconTitle>
-                <Icons>
-                    <IconImage src='/images/happy.svg'/>
-                    <IconImage src='/images/sad.svg'/>
-
-                </Icons>
-                <IconFooter>
-                    <h4>The Problem isn't solved </h4>
-                    <h3 style={{color:'red',marginTop:20,}}>Send us feedback</h3>
-                </IconFooter>
-            </IconContainer>
+          <Icon/>
        </Container>
     )
 }
@@ -131,18 +122,29 @@ align-items: center;
 padding: 20px;
 margin-left: 20px;
 font-size:18px;
+@media (max-width:768px){
+   font-size:15px;
+   margin-left: 0;
+}
 `
 const Answer1=styled.div`
 font-size: 20px;
 width: 50%;
 margin-top:100px;
 margin-left:40px;
+@media (max-width:768px){
+   margin-bottom: -10px;
+   margin-bottom: ${props=>props.oneAnswer?'40px':'-10px'};
+}
 `
 const Answer2=styled(Answer1)`
 margin-top: 40px;
 color: white;
 font-size:23px;
 width: 80%;
+@media (max-width:768px){
+    margin-bottom:${props=>props.oneAnswer?'40px':'10px'}
+}
 `
 
 const IconContainer=styled.div`
@@ -192,6 +194,11 @@ const Answer3=styled.div`
 font-size: 20px;
 margin-top: 60px;
 margin-left: 40px;
+@media (max-width:768px){
+   margin-bottom: -10px;
+   margin-bottom: ${props=>props.oneAnswer?'40px':'-10px'};
+   margin-left: 10px;
+}
 `
 const Image1=styled.img`
 margin: auto;
@@ -200,6 +207,13 @@ margin-top: 40px;
 margin-bottom: 50px;
 height:277px;
 width:373px;
+@media (max-width:768px){
+   margin-left: 5%;
+   width: 300px;
+   height: 400px;
+   object-fit: contain;
+   margin-top: 0;
+}
 `
 
 const Answer4=styled.div`
@@ -209,6 +223,10 @@ margin: auto;
 margin-top:70px;
 text-align: center;
 font-weight: bold;
+@media (max-width:768px){
+    font-size:20px;
+
+}
 `
 const Image2=styled.img`
 margin: auto;
@@ -217,4 +235,11 @@ margin-top: 40px;
 margin-bottom: 50px;
 height:210.5px;
 width:373px;
+@media (max-width:768px){
+   margin-left: 5%;
+   width: 300px;
+   height: 400px;
+   object-fit: contain;
+   margin-top: 0;
+}
 `

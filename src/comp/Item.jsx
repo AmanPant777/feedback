@@ -91,6 +91,9 @@ const Container=styled.div`
 height: 100%;
 width: 800px;
 margin: auto;
+@media (max-width:768px){
+    width:100%;
+}
 `
 const ItemContainer=styled.div`
 padding: 10px;
@@ -105,6 +108,9 @@ const ItemTitle=styled.h3`
 flex: 1;
 font-size: 20px;
 margin-left: 20px;
+@media (max-width: 768px) {
+    font-size: 15px;
+}
 `
 const Question=styled.div`
 width: 97%;

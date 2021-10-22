@@ -38,7 +38,7 @@ const data=[
             image2:"/images/trending/tvq4P2.png"
         }
     }, { id:"5",
-        question:'Q4.Sometimes why is it asking for a login for downloading any videos/photos?',
+        question:'Q5.Sometimes why is it asking for a login for downloading any videos/photos?',
         answer:{
             line1:'No, it will be restored Automatically once yu\'ll install the app again.'
         }
