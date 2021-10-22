@@ -60,7 +60,7 @@ const Audio = () => {
         <div>
             {data.map((item)=>{
                 return (
-                  <Container onClick={()=>history.push(
+                  <Container key={item.id} onClick={()=>history.push(
                       {pathname:'/audioanswer',
                       state:{question:item.question,answer:item.answer,id:item.id}})}>
                       <Questions>{item.question}</Questions>
@@ -80,4 +80,5 @@ const Container=styled.div`
 display: flex;
 align-items: center;
 justify-content: space-between;
+cursor: pointer;
 `

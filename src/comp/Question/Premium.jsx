@@ -1,5 +1,3 @@
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import styled from 'styled-components'
 import {useHistory} from 'react-router-dom'
@@ -41,7 +39,7 @@ const Premium = () => {
         <div>
             {data.map((item)=>{
                 return (
-                  <Container onClick={()=>history.push({
+                  <Container key={item.id} onClick={()=>history.push({
                       pathname:'/premiumanswer',
                       state:{question:item.question,answer:item.answer,id:item.id}
                   })}>
@@ -62,4 +60,5 @@ const Container=styled.div`
 display: flex;
 align-items: center;
 justify-content: space-between;
+cursor: pointer;
 `

@@ -52,7 +52,7 @@ const Others = () => {
              <Container to={{
                  pathname:'/othersanswer',
                  state:{question:item.question,answer:item.answer,id:item.id}
-             }} >
+             }} key={item.id}>
             <QuestionTitle>
                 {item.question}
             </QuestionTitle>

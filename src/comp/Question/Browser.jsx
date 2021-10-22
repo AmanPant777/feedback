@@ -56,7 +56,7 @@ const Browser = () => {
         <div>
             {data.map((item)=>{
                 return (
-                  <Container onClick={()=>history.push({
+                  <Container key={item.id} onClick={()=>history.push({
                       pathname:'/browseranswer',
                       state:{question:item.question,answer:item.answer,id:item.id}
                   })}>
@@ -77,4 +77,5 @@ const Container=styled.div`
 display: flex;
 align-items: center;
 justify-content: space-between;
+cursor: pointer;
 `

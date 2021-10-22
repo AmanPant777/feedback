@@ -1,5 +1,3 @@
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import styled from 'styled-components'
 import {useHistory} from 'react-router-dom'
@@ -51,7 +49,7 @@ const Trending = () => {
         <div>
             {data.map((item)=>{
                 return (
-                  <Container onClick={()=>history.push({
+                  <Container key={item.id} onClick={()=>history.push({
                       pathname:'/trendinganswer',
                       state:{question:item.question,answer:item.answer,id:item.id}
                   })}>
@@ -71,5 +69,6 @@ padding: 10px;
 const Container=styled.div`
 display: flex;
 align-items: center;
+cursor: pointer;
 justify-content: space-between;
 `

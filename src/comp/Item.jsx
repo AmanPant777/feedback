@@ -100,6 +100,7 @@ padding: 10px;
 display: flex;
 justify-content: space-between;
 align-items: center;
+cursor: pointer;
 `
 const Image=styled.img`
 

@@ -1,5 +1,3 @@
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import styled from 'styled-components'
 import {useHistory} from 'react-router-dom'
@@ -116,7 +114,7 @@ const Video = () => {
         <div>
             {data.map((item)=>{
                 return (
-                  <Container onClick={()=>history.push({pathname:'/videoanswer',state:{question:item.question,answer:item.answer,id:item.id}})}>
+                  <Container key={item.id} onClick={()=>history.push({pathname:'/videoanswer',state:{question:item.question,answer:item.answer,id:item.id}})}>
                       <Questions>{item.question}</Questions>
                       <img src="/images/next.svg" alt="" width={15}/>
                   </Container>
@@ -137,4 +135,5 @@ display: flex;
 align-items: center;
 justify-content: space-between;
 width: 100%;
+cursor: pointer;
 `
