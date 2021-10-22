@@ -25,10 +25,10 @@ const Fedback = () => {
                         setFeedBack(false)
 
                         }}>FAQ</Faq>
-                    <Feed  onClick={()=>{
+                    {/* <Feed  onClick={()=>{
                          setFeedBack(true)
                                setFaq(false)
-                        }}>FeedBack</Feed>
+                        }}>FeedBack</Feed> */}
                 </FeedBackTitle>
                 <Border>
                     <FaqBorder active={faq}></FaqBorder>
@@ -80,9 +80,9 @@ width: 70%;
 const FeedBackTitle = styled.div`
 display: flex;
 flex-direction: row;
-justify-content: space-around;
 width: 90%;
 margin: 20px auto;
+margin-left: 100px;
 padding: 10px;
 font-size:15px;
 @media (max-width: 768px) {
@@ -119,7 +119,7 @@ margin-top: -10px;
 const FaqBorder=styled.div`
 ${({active})=>active&&`background-color:red;`}
 height: 4px;
-width:50% ;
+width:100% ;
 position: absolute;
 `
 const FeedBackBorder=styled.div`
